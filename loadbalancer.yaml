@@ -3,11 +3,11 @@ kind: Service
 metadata:
   annotations:
     cloud.google.com/neg: '{"ingress":true}'
-  creationTimestamp: "2021-05-30T12:41:08Z"
+  creationTimestamp: "2021-05-30T16:56:34Z"
   finalizers:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
-    app: hello-app
+    app: nginx-3
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -32,7 +32,7 @@ metadata:
         f:type: {}
     manager: kubectl-expose
     operation: Update
-    time: "2021-05-30T12:41:08Z"
+    time: "2021-05-30T16:56:34Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -45,26 +45,26 @@ metadata:
           f:ingress: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2021-05-30T12:41:50Z"
-  name: hello-app
+    time: "2021-05-30T16:58:17Z"
+  name: nginx-3
   namespace: default
-  resourceVersion: "19952"
-  uid: 0e53a5c9-11bf-4a09-ba16-d1735d606c8b
+  resourceVersion: "149930"
+  uid: dd893568-5690-4663-be35-37f811d11d0c
 spec:
-  clusterIP: 10.104.130.82
+  clusterIP: 10.104.131.140
   clusterIPs:
-  - 10.104.130.82
+  - 10.104.131.140
   externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 30317
+  - nodePort: 30460
     port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
-    app: hello-app
+    app: nginx-3
   sessionAffinity: None
   type: LoadBalancer
 status:
   loadBalancer:
     ingress:
-    - ip: 34.116.216.92
+    - ip: 34.118.17.236
